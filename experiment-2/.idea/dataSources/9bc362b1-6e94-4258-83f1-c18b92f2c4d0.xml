@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="company@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="company">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="8wss"/>
+    <schema id="4" parent="1" name="bedinfun"/>
+    <schema id="5" parent="1" name="db_assignment_2_problem1"/>
+    <schema id="6" parent="1" name="db_assignment_2_problem2"/>
+    <schema id="7" parent="1" name="db_assignment_2_problem3"/>
+    <schema id="8" parent="1" name="fz_lover"/>
+    <schema id="9" parent="1" name="gl_website"/>
+    <schema id="10" parent="1" name="hit_database_course_problem1"/>
+    <schema id="11" parent="1" name="hit_database_course_problem2"/>
+    <schema id="12" parent="1" name="hit_database_course_problem3"/>
+    <schema id="13" parent="1" name="house"/>
+    <schema id="14" parent="1" name="information_schema"/>
+    <schema id="15" parent="1" name="jw_exam"/>
+    <schema id="16" parent="1" name="mysql"/>
+    <schema id="17" parent="1" name="performance_schema"/>
+    <schema id="18" parent="1" name="phpmyadmin"/>
+    <schema id="19" parent="1" name="sakila"/>
+    <schema id="20" parent="1" name="sys"/>
+    <schema id="21" parent="1" name="truth-discovery"/>
+    <schema id="22" parent="1" name="tvdata"/>
+    <schema id="23" parent="1" name="vividnam_yumendy"/>
+    <schema id="24" parent="1" name="world"/>
+    <schema id="25" parent="1" name="yumendy_blog"/>
+    <table id="26" parent="2" name="department">
+      <Comment>部门表</Comment>
+    </table>
+    <table id="27" parent="2" name="employee">
+      <Comment>员工表</Comment>
+    </table>
+    <table id="28" parent="2" name="project">
+      <Comment>工程项目表</Comment>
+    </table>
+    <table id="29" parent="2" name="works_on">
+      <Comment>工作表</Comment>
+    </table>
+    <column id="30" parent="26" name="dname">
+      <Position>1</Position>
+      <Comment>部门名</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="26" name="dno">
+      <Position>2</Position>
+      <Comment>部门号</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="26" name="mgrssn">
+      <Position>3</Position>
+      <Comment>部门领导身份证号</Comment>
+      <DataType>char(18)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="26" name="mgrstartdate">
+      <Position>4</Position>
+      <Comment>部门领导开始领导工作的日期</Comment>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="34" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>dno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="27" name="ename">
+      <Position>1</Position>
+      <Comment>工作人员名字</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="27" name="essn">
+      <Position>2</Position>
+      <Comment>工作人员身份证号 主键</Comment>
+      <DataType>char(18)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="27" name="address">
+      <Position>3</Position>
+      <Comment>工作人员住址</Comment>
+      <DataType>varchar(256)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="27" name="salary">
+      <Position>4</Position>
+      <Comment>工作人员工资</Comment>
+      <DataType>decimal(8,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="27" name="superssn">
+      <Position>5</Position>
+      <Comment>工作人员直接领导的身份证号</Comment>
+      <DataType>char(18)|0</DataType>
+    </column>
+    <column id="40" parent="27" name="dno">
+      <Position>6</Position>
+      <Comment>所属部门</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="41" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>essn</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="28" name="pname">
+      <Position>1</Position>
+      <Comment>工程项目名</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="28" name="pno">
+      <Position>2</Position>
+      <Comment>工程项目号</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="28" name="plocation">
+      <Position>3</Position>
+      <Comment>工程项目所在地</Comment>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="28" name="dno">
+      <Position>4</Position>
+      <Comment>工程项目所属部门号</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="46" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="29" name="essn">
+      <Position>1</Position>
+      <Comment>工作人员身份证号</Comment>
+      <DataType>char(18)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="29" name="pno">
+      <Position>2</Position>
+      <Comment>工程项目号</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="29" name="hours">
+      <Position>3</Position>
+      <Comment>工作小时数</Comment>
+      <DataType>float(5,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="50" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>essn
+pno</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

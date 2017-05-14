@@ -43,7 +43,7 @@ create table `works_on` (
 
 INSERT INTO  `DEPARTMENT`
 VALUES (
-'研发部',  'DD001',  '00002',  '2010-04-01'
+'Research Department',  'DD001',  '00002',  '2010-04-01'
 ), (
 'Future Direction',  'FT002',  '00003',  '2009-01-01'
 ), (

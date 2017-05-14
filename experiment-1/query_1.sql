@@ -1,20 +1,20 @@
 use company;
 
--- 1.1 参加了项目名为“哈同公路”的员工名字；
+-- 1.1 参加了项目名为“SQL Project”的员工名字；
 
 SELECT DISTINCT employee.ename
 FROM employee
 JOIN works_on ON employee.essn = works_on.essn
 JOIN project ON project.pno = works_on.pno
-WHERE project.pname='哈同公路';
+WHERE project.pname='SQL Project';
 
--- 1.2 在“研发部”工作且工资低于3000元的员工名字和地址；
+-- 1.2 在“Research Department”工作且工资低于3000元的员工名字和地址；
 
 SELECT DISTINCT employee.ename, employee.address
 FROM employee
 JOIN department ON employee.dno = department.dno
-WHERE department.dname =  '研发部'
-AND employee.salary <3000;
+WHERE department.dname =  'Research Department'
+AND employee.salary < 3000;
 
 -- 1.3 没有参加项目编号为P1的项目的员工姓名；
 
@@ -49,7 +49,7 @@ FROM
     (department
     JOIN employee AS m ON department.mgrssn = m.essn) ON e.dno = department.dno
 WHERE
-    m.ename = 'Mike'
+    m.ename = '张红'
 
 -- 1.5 至少参加了项目编号为P1和P2的项目的员工号；
 
@@ -77,7 +77,7 @@ FROM
     works_on AS B
 WHERE
     A.essn = B.essn AND A.pno = 'P1'
-        AND B.pno = 'P2'
+        AND B.pno = 'P2';
 
 -- 1.6 参加了全部项目的员工号码和姓名；
 
